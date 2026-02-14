@@ -1,0 +1,20 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+thickness = int(input())
+c = 'H'
+
+for i in range(thickness):
+    print((c * (2*i + 1)).rjust(thickness + i))
+
+for i in range(thickness + 1):
+    print((c * thickness).center(thickness * 2) +
+          (c * thickness).center(thickness * 6))
+
+for i in range((thickness + 1)//2):
+    print((c * thickness * 5).center(thickness * 6))
+
+for i in range(thickness + 1):
+    print((c * thickness).center(thickness * 2) +
+          (c * thickness).center(thickness * 6))
+
+for i in range(thickness):
+    print((c * (2*(thickness - i) - 1)).center(thickness * 10))
